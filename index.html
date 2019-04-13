@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Train Scheduler</title>
+</head>
+
+<body class="container">
+    <div class="jumbotron jumbotron-fluid bg-dark">
+        <div class="container text-center text-white">
+            <h1 class="display-4">Train Schedules</h1>
+            <p class="lead">An Easy Way to View and Track Upcoming Trains</p>
+            <H2 class="text-bold">Current Time: <span id="current-time"></span></H2>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            Current Train Schedule
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            Add Train
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Train Name</label>
+                    <input type="text" class="form-control" id="train-name" aria-describedby="emailHelp"
+                        placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Destination</label>
+                    <input type="text" class="form-control" id="destination" placeholder="">
+                </div>
+                <div class="form-group">
+                        <label for="exampleInputEmail1">First Train Time (hh:mm - AM/PM)</label>
+                        <input type="time" class="form-control" id="first-train" aria-describedby="emailHelp"
+                            placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Frequency</label>
+                        <input type="number" class="form-control" id="frequency" placeholder="">
+                    </div>
+
+                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
